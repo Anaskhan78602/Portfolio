@@ -1,0 +1,301 @@
+/* About.css */
+.about-page {
+  padding: 40px;
+  background-color: black;
+  color: white;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-content {
+  flex: 1;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+.about-content h1{
+  color: red;
+  font-family:'Lucida calligraphy';
+  
+  text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.7)
+  
+}
+#skills {
+  
+ color:rgb(230, 14, 14);
+ 
+}
+h1 {
+  font-size: 2.5rem;
+  color: rgb(214, 41, 41);
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+h2 {
+  font-size: 2rem;
+  color: red;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeIn 1.8s forwards;
+  animation-delay: 0.2s;
+}
+
+p {
+  font-size: 1rem;
+  color: #bbb;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+.skills-section {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.skills-category {
+  margin-bottom: 30px;
+}
+
+.skills-list {
+  margin-top: 10px;
+  color: #fff;
+}
+
+.skill-card {
+  color:white;
+  margin-bottom: 15px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.progress-bar-background {
+  width: 100%;
+  background-color: white;
+  height: 8px;
+  border-radius: 5px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: red;
+  height: 100%;
+  border-radius: 5px;
+  width: 0%;
+  transition: width 2s ease-out;
+}
+
+.skill-card p {
+  font-size: 14px;
+  color: white;
+  margin-top: 5px;
+}
+
+.category-header {
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  animation: slideIn 1.5s forwards;
+  animation-delay: 0.5s;
+  text-decoration: underline;
+}
+.category-header:hover{
+  color:red;
+}
+.education-section {
+  margin-top: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center the items */
+  gap: 20px; /* Space between heading and cards */
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.education-section h2 {
+  font-size: 2rem;
+  color: rgb(200, 8, 8);
+  margin-bottom: 20px; /* Add margin for spacing */
+ 
+}
+.education-card-container {
+  display: flex;
+  flex-direction: row; /* Arrange the cards horizontally */
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center the cards in the container */
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.education-card {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Enables 3D space for the flip effect */
+  margin: 10px;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.education-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.education-card:hover .education-card-inner {
+  transform: rotateY(180deg);
+}
+
+.education-card-front,
+.education-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.education-card-front {
+  background-color: #fff;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.education-card-front h3 {
+  font-size: 1.5rem;
+  color: #ff6f61;
+}
+
+.education-card-front p {
+  font-size: 1rem;
+  color: black;
+}
+.education-card-back p{
+  color: white;
+}
+.education-card-back p:hover{
+  color:blue;
+  text-decoration: underline;
+}
+.education-card-back {
+  background-color: #d54949; /* Red color */
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0; /* Hide the back initially */
+  transition: opacity 0.8s ease-out; /* Animate opacity change */
+}
+
+/* Add hover effect to reveal the back side */
+.education-card:hover .education-card-back {
+  opacity: 1; /* Show the back side when hovered */
+}
+
+.education-card-back img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.education-card-back img:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.7);
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    background-color: transparent;
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    background-color: #d31010; /* Red color */
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.education-card-back a {
+  color: #ff6f61;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.education-card-back a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Profile Section */
+.profile-section {
+  text-align: center;
+}
+
+.profile-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-content {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .skills-section {
+    width: 100%;
+    color: white;
+  }
+
+  .education-section {
+    width: 100%;
+  }
+}

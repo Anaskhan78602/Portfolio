@@ -1,0 +1,15 @@
+.footer {
+  background-color: #1a1a1d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Ensure the footer is above other elements */
+}
+
+.footer p {
+  margin: 0;
+}

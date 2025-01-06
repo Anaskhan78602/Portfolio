@@ -1,0 +1,280 @@
+/* General home page layout */
+.home {
+  padding: 50px;
+  background-color: black;
+  color: white;
+  display: block;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align vertically */
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+}
+
+#logo {
+  padding: 0px;
+  text-align: left;
+  color: red;
+  font-size: 20px;
+}
+
+#name {
+  color: red;
+  text-align: center;
+  font-size: 56px;
+  text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Left Section - Text and Social Links */
+.left-section {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%; /* Adjust for left section width */
+}
+
+.left-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+  text-align: left;
+}
+
+.left-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: left;
+}
+.cta-button {
+  width: 30%;
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  margin-bottom: 20px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+  position: relative;
+}
+
+.cta-button {
+  background: white;
+  color: red;
+  box-shadow: 0 0 25px white;
+}
+
+.cta-button:hover {
+  background-color: red;
+  color: white;
+  box-shadow: 0 0 5px red ,
+              0 0 25px red ,
+              0 0 50px red  ;
+             
+             
+}
+
+
+/*.cta-button {
+  display: inline-block;
+  width:30%;
+  background-color: rgb(254, 3, 3);
+  box-shadow: 0px 0px 25px red;
+  color: white;
+  border: 2px solid transparent;
+  
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  transition: 0.3s ease-in-out;
+  
+}
+.cta-button:hover{
+  box-shadow: 0px 0px 25px red;
+}
+.cta-button:hover,
+.cta-button:focus {
+  background-color: red;
+  box-shadow: 10px 0px 20px  lightcoral;
+  box-shadow: 0px 0px 40px var(--hover);
+  transform: translateY(-1em);
+}
+*/
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start; /* Align to the left */
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: black; /* Circle background color */
+  border-radius: 50%; /* Make it circular */
+  border:2px solid red;
+  color: red; /* Icon color */
+  font-size: 30px; /* Icon size */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for circle */
+  position: relative; /* For animation */
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Slightly enlarge the circle */
+  box-shadow: 0 0 40px rgb(219, 2, 2); /* Brighter shadow on hover */
+}
+
+/* Animate the icon out of the circle */
+.social-icon:hover > svg {
+  transform: translateY(-15px); /* Pop up effect */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.social-icon svg {
+  transition: transform 0.3s ease; /* Set initial transition for hover */
+}
+
+/* Optional: Different background on hover */
+.social-icon:hover {
+  background-color: red; /* Change circle background on hover */
+  color:white
+}
+
+
+/* Right Section - Image and Info */
+.right-section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%; /* Adjust for right section width */
+}
+
+.home-image-container {
+  margin-top: 2rem;
+}
+
+.home-image {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  border-radius: 50%;
+  box-shadow: 2px 0px 25px yellow;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.home-image:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+  box-shadow: 2px 2px 35px yellow;
+}
+
+.info {
+  text-align: center;
+}
+
+.info p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+
+/* From Uiverse.io by ferlagher */ 
+.info .download-cv {
+  position: relative;
+  font-size: 1.2em;
+  padding: 0.7em 1.4em;
+  background-color: #BF0426;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5em;
+  color: #DEDEDE;
+  box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+}
+
+.info .download-cv::before {
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, rgba(33,33,33,1) 0%, rgba(33,33,33,1) 50%, rgba(150,4,31,1) 50%, rgba(191,4,38,1) 60%);
+  border-radius: 0 0 0.5em 0;
+  box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.info .download-cv:hover::before {
+  width: 1.6em;
+  height: 1.6em;
+}
+
+.info .download-cv:active {
+  box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+  transform: translate(0.1em, 0.1em);
+}
+.info .download-cv:hover{
+  box-shadow: 0 0 5px red ,
+              0 0 25px red;
+               
+}
+
+
+span {
+  font-weight: bold;
+}
+.info span {
+  color: red;
+}
+
+/* Section Styling */
+#about, #projects, #contact {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#about {
+  background-color: black;
+}
+
+#projects {
+  background-color: black;
+}
+
+#contact {
+  background-color: black;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
