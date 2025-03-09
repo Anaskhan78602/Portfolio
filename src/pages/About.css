@@ -19,20 +19,20 @@
   animation: fadeIn 1.5s forwards;
 }
 .about-content h1{
-  color: red;
+  color: #00ffff;
   font-family:'Lucida calligraphy';
   
-  text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.7)
+  text-shadow: 2px 2px 5px rgba(0, 100, 100,1)
   
 }
 #skills {
   
- color:rgb(230, 14, 14);
+ color:#00ffff;
  
 }
 h1 {
   font-size: 2.5rem;
-  color: rgb(214, 41, 41);
+  color: #00ffff;
   text-align: center;
   opacity: 0;
   animation: fadeIn 2s forwards;
@@ -40,7 +40,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  color: red;
+  color: #00ffff;
   margin-bottom: 10px;
   opacity: 0;
   animation: fadeIn 1.8s forwards;
@@ -86,7 +86,7 @@ p {
 }
 
 .progress-bar {
-  background-color: red;
+  background-color: #00ffff;
   height: 100%;
   border-radius: 5px;
   width: 0%;
@@ -109,7 +109,7 @@ p {
   text-decoration: underline;
 }
 .category-header:hover{
-  color:red;
+  color:#00ffff;
 }
 .education-section {
   margin-top: 40px;
@@ -124,7 +124,7 @@ p {
 
 .education-section h2 {
   font-size: 2rem;
-  color: rgb(200, 8, 8);
+  color: #00ffff;
   margin-bottom: 20px; /* Add margin for spacing */
  
 }
@@ -141,7 +141,9 @@ p {
   height: 200px;
   perspective: 1000px; /* Enables 3D space for the flip effect */
   margin: 10px;
+  margin-bottom: 6vh;
   flex-shrink: 0; /* Prevent shrinking */
+  padding-right: 5vh;
 }
 
 .education-card-inner {
@@ -175,11 +177,12 @@ p {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  box-shadow: 0px 0px 8px white;
 }
 
 .education-card-front h3 {
   font-size: 1.5rem;
-  color: #ff6f61;
+  color: #00ffff;
 }
 
 .education-card-front p {
@@ -187,15 +190,15 @@ p {
   color: black;
 }
 .education-card-back p{
-  color: white;
+  color: black;
 }
 .education-card-back p:hover{
   color:blue;
   text-decoration: underline;
 }
 .education-card-back {
-  background-color: #d54949; /* Red color */
-  color: white;
+  background-color: #00ffff; /* Red color */
+  color: black;
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -206,6 +209,7 @@ p {
   border-radius: 10px;
   opacity: 0; /* Hide the back initially */
   transition: opacity 0.8s ease-out; /* Animate opacity change */
+  box-shadow:2px 2px 30px #00ffff;
 }
 
 /* Add hover effect to reveal the back side */
@@ -222,7 +226,7 @@ p {
 }
 .education-card-back img:hover {
   transform: scale(1.2);
-  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 8px 20px rgba(11, 0, 0, 0.7);
 }
 
 @keyframes fadeSlideUp {
@@ -232,7 +236,7 @@ p {
     opacity: 0;
   }
   100% {
-    background-color: #d31010; /* Red color */
+    background-color: #00ffff; /* Red color */
     transform: translateY(0);
     opacity: 1;
   }
@@ -240,7 +244,7 @@ p {
 
 
 .education-card-back a {
-  color: #ff6f61;
+  color: #00ffff;
   text-decoration: none;
   font-size: 1.2rem;
 }

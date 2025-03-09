@@ -24,8 +24,8 @@
 }
 
 .red-text {
-  color: red;
-  text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
+  color: #00ffff;
+  text-shadow: 2px 2px 5px rgba(100, 84, 0, 0.5);
 }
 
 .navbar ul {
@@ -38,13 +38,14 @@
 
 .navbar ul li {
   margin: 0 15px;
-  color:white;
+  color:#00ffff;
   cursor: pointer;
+  margin-right: 3vh;
 }
 
 .navbar ul li:hover {
   text-decoration: underline;
-  color: red;
+  color: rgb(217, 224, 7);
   transition: color 0.3s ease;
 }
 

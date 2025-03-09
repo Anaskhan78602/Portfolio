@@ -15,10 +15,10 @@
 
 h1 {
   font-size: 2.5rem;
-  color: red;
+  color: #00ffff;
   font-family: 'lucida calligraphy';
   animation: fadeIn 2s forwards;
-  text-shadow: 2px 2px 5px rgba(255,0,0,0.7);
+  text-shadow: 2px 2px 5px rgba(0,100,100,0.7);
 }
 
 p {
@@ -38,14 +38,20 @@ p {
 
 .input-group {
   margin-bottom: 20px;
+  margin-right: 2vh;
 }
 
 .input-group label {
   font-size: 1rem;
-  color: red;
+  color: #00ffff;
   font-weight: bolder ;
   display: block;
   margin-bottom: 8px;
+}
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  font-size: 2vh; /* Adjust size as needed */
+  opacity: 0.6; /* Optional: Reduce opacity for better readability */
 }
 
 .input-group input,
@@ -68,7 +74,7 @@ p {
 /* From Uiverse.io by nikk7007 */ 
 .submit-button {
   background-color: white;
-  --color: red;
+  --color: #00ffff;
   padding: 0.8em 1.7em;
   background-color: white;
   border-radius: .3em;
@@ -84,6 +90,7 @@ p {
   color: var(--color);
   z-index: 1;
   box-shadow: 0px 0px 25px white;
+  color: black;
  }
  
  .submit-button::before, .button::after {
@@ -115,8 +122,7 @@ p {
  }
  
  .submit-button:hover {
-  
-  color: white;
+  font-style: bold;
  }
  
  .submit-button:active {
@@ -125,9 +131,10 @@ p {
  
 
 .submit-button:hover {
-  box-shadow: 0 0 5px red ,
-              0 0 25px red ,
-              0 0 50px red ;
+  color:black ;
+  box-shadow: 0 0 5px#00ffff,
+              0 0 25px #00ffff ,
+              0 0 50px #00ffff ;
              
               
 }*/
@@ -144,7 +151,7 @@ p {
 
 .contact-info h2 {
   font-size: 2rem;
-  color: #950101;
+  color: #00ffff;
 }
 
 .contact-info ul {
@@ -159,7 +166,7 @@ p {
 }
 
 .contact-info li a {
-  color: #ff6f61;
+  color: yellow;
   text-decoration: none;
 }
 
@@ -200,8 +207,8 @@ p {
   height: 50px; /* Increase the size of the circle */
   background-color: black; /* Circle background color */
   border-radius: 50%; /* Make it circular */
-  border: 2px solid red;
-  color: red; /* Icon color */
+  border: 2px solid #00ffff;
+  color: #00ffff; /* Icon color */
   font-size: 30px; /* Icon size */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for circle */
@@ -210,7 +217,7 @@ p {
 
 .social-icons a:hover {
   transform: scale(1.2); /* Slightly enlarge the circle */
-  box-shadow: 0 0 40px rgb(219, 2, 2); /* Brighter shadow on hover */
+  box-shadow: 0 0 40px #00ffff; /* Brighter shadow on hover */
 }
 
 /* Animate the icon out of the circle */
@@ -225,7 +232,7 @@ p {
 
 /* Optional: Different background on hover */
 .social-icons a:hover {
-  background-color: red; /* Change circle background on hover */
+  background-color: #00ffff; /* Change circle background on hover */
   color: white;
 }
 

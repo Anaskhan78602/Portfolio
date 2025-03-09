@@ -2,12 +2,13 @@
 .certifications {
     animation: fadeIn 1s ease-in-out;
     
+    
   }
   
   .certifications h2 {
     text-align: center;
     font-size: 2rem;
-    color: #333;
+    color: #00ffff;
     margin-bottom: 20px;
     animation: fadeInUp 1s ease-in-out;
   }
@@ -41,7 +42,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #333;
+    color: #00ffff;
   }
   
   .card p {

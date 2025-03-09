@@ -21,10 +21,10 @@
 }
 
 #name {
-  color: red;
+  color: #00FFFF;
   text-align: center;
   font-size: 56px;
-  text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
+  text-shadow: 2px 2px 5px rgba(0, 100, 100, 1.8);
 }
 
 /* Left Section - Text and Social Links */
@@ -33,14 +33,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%; /* Adjust for left section width */
+  flex: 1; /* Allow left section to take equal width */
+  max-width: 45%; /* Prevent the left section from growing too large */
 }
+
 
 .left-section h1 {
   font-size: 3rem;
   margin-bottom: 20px;
   color: white;
   text-align: left;
+  padding-top: 4vh;
 }
 
 .left-section h2 {
@@ -67,16 +70,16 @@
 
 .cta-button {
   background: white;
-  color: red;
+  color: #0e0e0e;
   box-shadow: 0 0 25px white;
 }
 
 .cta-button:hover {
-  background-color: red;
-  color: white;
-  box-shadow: 0 0 5px red ,
-              0 0 25px red ,
-              0 0 50px red  ;
+  background-color: #00FFFF;
+  color: rgb(14, 13, 13);
+  box-shadow: 0 0 5px #00FFFF,
+              0 0 25px #00FFFF,
+              0 0 50px#00FFFF;
              
              
 }
@@ -125,8 +128,8 @@
   height: 50px;
   background-color: black; /* Circle background color */
   border-radius: 50%; /* Make it circular */
-  border:2px solid red;
-  color: red; /* Icon color */
+  border:2px solid #00ffff;
+  color: #00ffff; /* Icon color */
   font-size: 30px; /* Icon size */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for circle */
@@ -135,7 +138,7 @@
 
 .social-icon:hover {
   transform: scale(1.2); /* Slightly enlarge the circle */
-  box-shadow: 0 0 40px rgb(219, 2, 2); /* Brighter shadow on hover */
+  box-shadow: 0 0 40px rgb(0, 100, 100,1.4); /* Brighter shadow on hover */
 }
 
 /* Animate the icon out of the circle */
@@ -150,20 +153,23 @@
 
 /* Optional: Different background on hover */
 .social-icon:hover {
-  background-color: red; /* Change circle background on hover */
-  color:white
+  background-color: #00ffff; /* Change circle background on hover */
+  color:white;
 }
 
 
 /* Right Section - Image and Info */
+
 .right-section {
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%; /* Adjust for right section width */
+  flex: 1; /* Allow the right section to take equal width */
+  max-width: 45%; /* Prevent the right section from growing too large */
 }
+
 
 .home-image-container {
   margin-top: 2rem;
@@ -172,16 +178,17 @@
 .home-image {
   width: 100%;
   height: auto;
-  max-width: 250px;
+  margin-bottom: 4vh;
+  max-width: 300px;
   border-radius: 50%;
-  box-shadow: 2px 0px 25px yellow;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 2px 0px 25px #00ffff;
+  transition: transform 0.5s ease, opacity 0.3s ease;
 }
 
 .home-image:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   opacity: 0.9;
-  box-shadow: 2px 2px 35px yellow;
+  box-shadow: 2px 2px 35px #00ffff;
 }
 
 .info {
@@ -192,18 +199,33 @@
   font-size: 1.2rem;
   margin: 10px 0;
 }
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+    align-items: center;
+  }
 
+  .left-section, .right-section {
+    max-width: 100%; /* Full-width sections on smaller screens */
+    text-align: center; /* Center-align content */
+  }
+
+  .home-image {
+    max-width: 200px; /* Adjust image size for smaller screens */
+  }
+}
 
 /* From Uiverse.io by ferlagher */ 
 .info .download-cv {
   position: relative;
   font-size: 1.2em;
   padding: 0.7em 1.4em;
-  background-color: #BF0426;
+  margin-top: 3vh;
+  background-color: #00ffff;
   text-decoration: none;
   border: none;
   border-radius: 0.5em;
-  color: #DEDEDE;
+  color: black;
   box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
 }
 
@@ -214,7 +236,7 @@
   width: 0;
   top: 0;
   left: 0;
-  background: linear-gradient(135deg, rgba(33,33,33,1) 0%, rgba(33,33,33,1) 50%, rgba(150,4,31,1) 50%, rgba(191,4,38,1) 60%);
+  background: linear-gradient(135deg, rgba(33,33,33,1) 0%, rgba(33,33,33,1) 50%, rgba(0,100,100,1) 50%, rgba(0,100,100,1) 60%);
   border-radius: 0 0 0.5em 0;
   box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
   transition: 0.3s;
@@ -230,8 +252,8 @@
   transform: translate(0.1em, 0.1em);
 }
 .info .download-cv:hover{
-  box-shadow: 0 0 5px red ,
-              0 0 25px red;
+  box-shadow: 0 0 5px #00ffff,
+              0 0 25px #00ffff;
                
 }
 
@@ -240,7 +262,7 @@ span {
   font-weight: bold;
 }
 .info span {
-  color: red;
+  color: #00ffff;
 }
 
 /* Section Styling */

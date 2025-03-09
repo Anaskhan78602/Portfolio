@@ -4,7 +4,16 @@ import './Navbar.css';
 
 const Navbar = () => {
   const handleScrollToSection = (section) => {
-    document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
+    if (section === 'home') {
+      // Scroll to the top of the page
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Scroll to the specified section
+      const element = document.getElementById(section);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   };
 
   return (

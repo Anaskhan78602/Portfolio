@@ -66,8 +66,8 @@ const styles = {
   heading: {
     textAlign: 'center',
     fontSize: '2rem',
-    color: 'rgb(255,0,0)',
-    textShadow: '2px 2px 5px rgb(255,0,0,0.6)',
+    color: '#00ffff',
+    textShadow: '2px 2px 5px rgb(0,100,100,0.6)',
     fontFamily:'lucida calligraphy',
   },
   cardsContainer: {
@@ -91,7 +91,7 @@ const styles = {
     fontSize: '1.5rem',
     fontWeight: 'bold',
     marginBottom: '10px',
-    color: '#ff3d3d', // Red text for title
+    color: '#00ffff', // Red text for title
   },
   cardIssuer: {
     color: '#fff', // White text for issuer
@@ -104,7 +104,7 @@ const styles = {
   },
   link: {
     marginTop: '10px',
-    color: '#ff3d3d', // Red link color
+    color: '#00ffff', // Red link color
     textDecoration: 'underline',
     fontWeight: 'bold',
     

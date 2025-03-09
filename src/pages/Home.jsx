@@ -21,10 +21,11 @@ const Home = () => {
 
   const handleResumeDownload = () => {
     const link = document.createElement('a');
-    link.href = '/public/Anas_Khan.pdf.pdf'; // Update with actual resume URL
-    link.download = 'My_Resume.pdf';
+    link.href = '/newest resume.pdf'; // ✅ Correct path (No /public/)
+    link.download = 'newest resume.pdf';
     link.click();
   };
+  
 
   return (
     <section className="home">
@@ -104,6 +105,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/*home section */ }
       
 
       {/* About Section */}
